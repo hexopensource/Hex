@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Hex.DataTypes.Concrete;
 using Neo4jClient;
 using System.Linq.Expressions;
+using Hex.DataAccess.Helper;
 
 namespace Hex.DataAccess.Concrete
 {
@@ -21,13 +22,13 @@ namespace Hex.DataAccess.Concrete
         }
 
         public Node Get(Expression<Func<Node, bool>> query,Node node)
-        {           
-
-            return _client.Cypher
+        {
+           IEnumerable<Node> listNode= _client.Cypher
                 .Match("(n:" + node.Label + ")")
                 .Where(query)
                 .Return(n => n.As<Node>())
-                .Results.SingleOrDefault();
+                .Results;
+            return listNode.FirstOrDefault(); 
         }
 
         public List<Node> GetAll(Node node,Expression<Func<Node, bool>> query = null)
@@ -46,20 +47,29 @@ namespace Hex.DataAccess.Concrete
                .WithParam("node", node)
                .ExecuteWithoutResults();
         }
-        public void Update(Node node)
+        public void Update(Node oldNode,Node newNode)
         {
+
+            DataHelper.CopyValues(oldNode, newNode);              
+            _client.Cypher
+               .Match("(n:" + oldNode.Label + ")")
+               .Where((Node n)=>n.Id==oldNode.Id)
+               .Set("n"+" = {item}")
+               .WithParam("item", oldNode)
+               .ExecuteWithoutResults();
 
         }
 
         public void Delete(Node node)
-        {
-            throw new NotImplementedException();
+        {           
+            _client.Cypher
+                .Match("(n:" + node.Label + ")")
+                .Where((Node n)=>n.Id==node.Id)
+                .Delete("n")
+                .ExecuteWithoutResults();
         }
 
-
-
-
-
+        
         public List<Node> GetRelated(System.Linq.Expressions.Expression<Func<Node, bool>> query1, System.Linq.Expressions.Expression<Func<Node, bool>> query2, Relation relation)
         {
             throw new NotImplementedException();
@@ -70,9 +80,15 @@ namespace Hex.DataAccess.Concrete
             throw new NotImplementedException();
         }
 
-        public void AddRelation(System.Linq.Expressions.Expression<Func<Node, bool>> query1, System.Linq.Expressions.Expression<Func<Node, bool>> query2, Relation relation)
-        {
-            throw new NotImplementedException();
+        public void AddRelation(Node node1, Node node2,  Relation relation)
+        {           
+            _client.Cypher
+                .Match("(n:" + node1.Label + ")", "(o:" + node2.Label + ")")
+                .Where((Node n)=>n.Id==node1.Id)
+                .AndWhere((Node o)=>o.Id==node2.Id)
+                .CreateUnique("(n)" + "-[:" + relation.Name + " {r}]->" + "(o)")
+                .WithParam("r", relation)
+                .ExecuteWithoutResults();
         }
         public void DeleteRelation(System.Linq.Expressions.Expression<Func<Node, bool>> query1, System.Linq.Expressions.Expression<Func<Node, bool>> query2, Relation relation)
         {

@@ -24,10 +24,13 @@ namespace Hex.Shared
         void Add(Node node);
 
         [OperationContract()]
-        void Update(Node node);
+        void Update(Node oldNode,Node newNode);
 
         [OperationContract()]
         void Delete(Node node);
+
+        [OperationContract()]
+        void AddRelation(Node node1,Node node2,Relation relation);
 
 
     }

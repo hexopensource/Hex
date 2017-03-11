@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Abstract\INodeRepository.cs" />
     <Compile Include="Concrete\NodeRepository.cs" />
+    <Compile Include="Helper\DataHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

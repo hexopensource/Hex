@@ -13,13 +13,50 @@ namespace Hex.Client
     {
         static void Main(string[] args)
         {
-
-            GetNode();
+            AddRelation();
+            //UpdateNode();
+            //DeleteNode();
+            //GetNode();
             //AddNode2();
             //AddNode();
             //ShowNodes();
 
             Console.ReadLine();
+        }
+
+        private static void AddRelation()
+        {
+            Node node1= WcfProxy<IHexService>.CreateChannel().Get(
+                new Node { Label = "Person", Id = "Bar" }
+                );
+            node1.Label = "Person";
+            Node node2 =WcfProxy<IHexService>.CreateChannel().Get(
+                new Node { Label = "Person", Id = "Onu" }
+                );
+            node2.Label = "Person";
+            WcfProxy<IHexService>.CreateChannel().AddRelation(
+               node1, node2, new Relation() { Name = "KNOWS" });
+        }
+
+        private static void UpdateNode()
+        {
+            Node oldNode = WcfProxy<IHexService>.CreateChannel().Get(
+                new Node { Label ="Person",Id="Can" }
+                );
+            oldNode.Label = "Person";
+            WcfProxy<IHexService>.CreateChannel().Update(
+                oldNode ,
+                new Node() {Label="Person",Id="Can",Surname="Kaya"}
+                );
+
+            Console.WriteLine("Node Deleted is successful.");
+        }
+
+        private static void DeleteNode()
+        {
+            WcfProxy<IHexService>.CreateChannel().Delete(new Node() {Label="Person" ,Id = "Can"});
+
+            Console.WriteLine("Node Deleted is successful.");
         }
 
         private static void AddNode2()

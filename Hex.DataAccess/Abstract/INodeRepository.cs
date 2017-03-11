@@ -14,9 +14,9 @@ namespace Hex.DataAccess.Abstract
         List<Node> GetAll(Node node,Expression<Func<Node, bool>> query=null);
         Node Get(Expression<Func<Node, bool>> query, Node node);
         void Add(Node node);
-        void Update(Node node);
+        void Update(Node oldNode,Node newNode);
         void Delete(Node node );
-        void AddRelation(Expression<Func<Node, bool>> query1, Expression<Func<Node, bool>> query2, Relation relation);
+        void AddRelation(Node node1,Node node2, Relation relation);
         void DeleteRelation(Expression<Func<Node, bool>> query1, Expression<Func<Node, bool>> query2, Relation relation);
         List<Node> GetRelated(Expression<Func<Node, bool>> query1, Expression<Func<Node, bool>> query2, Relation relation);
         Tuple<Node, Node> GetRelations(Expression<Func<Node, bool>> query1, Expression<Func<Node, bool>> query2, Relation relation);    

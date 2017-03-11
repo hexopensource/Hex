@@ -22,7 +22,7 @@ namespace Hex.Server
 
         public Node Get(Node node)
         {
-            return _session.Get(n => n.Id == node.Id,node);
+            return _session.Get(n => (n.Id == node.Id),node);
         }
         public List<Node> GetList(Node node)
         {
@@ -33,14 +33,18 @@ namespace Hex.Server
             _session.Add(node);
         }
 
-        public void Update(Node node)
+        public void Update(Node oldNode,Node newNode)
         {
-            _session.Update(node);
+            _session.Update(oldNode,newNode);
         }
 
         public void Delete(Node node)
         {
             _session.Delete(node);
+        }
+        public void AddRelation(Node node1, Node node2, Relation relation)
+        {
+            _session.AddRelation(node1,node2,relation);
         }
     }
 }
