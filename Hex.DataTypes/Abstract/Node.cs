@@ -30,5 +30,6 @@ namespace Hex.DataTypes.Abstract
         public string Surname { get; set; }
         public string Birthday { get; set; }
         public string UserType { get; set; }
+        //Company
     }
 }
