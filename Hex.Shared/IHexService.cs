@@ -32,6 +32,13 @@ namespace Hex.Shared
         [OperationContract()]
         void AddRelation(Node node1,Node node2,Relation relation);
 
+        [OperationContract()]
+        void DeleteRelation(Node node1, Node node2, Relation relation);
+
+        [OperationContract()]
+        List<Node> GetRelated(Node node1, Node node2, Relation relation);
+
+
 
     }
 }

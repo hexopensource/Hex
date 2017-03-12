@@ -1,9 +1,7 @@
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\bin\Debug\Hex.Shared.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\bin\Debug\Hex.Shared.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\bin\Debug\Hex.DataTypes.dll
-C:\GitRepository\RepoDotNet\Hex\Hex.Shared\bin\Debug\Newtonsoft.Json.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\bin\Debug\Hex.DataTypes.pdb
-C:\GitRepository\RepoDotNet\Hex\Hex.Shared\bin\Debug\Newtonsoft.Json.xml
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\obj\Debug\Hex.Shared.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\obj\Debug\Hex.Shared.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Shared\obj\Debug\Hex.Shared.pdb

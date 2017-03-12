@@ -13,29 +13,72 @@ namespace Hex.Client
     {
         static void Main(string[] args)
         {
-            AddRelation();
+            GetRelated();
+            //DeleteRelation();
+            //AddRelation();
             //UpdateNode();
             //DeleteNode();
             //GetNode();
             //AddNode2();
             //AddNode();
             //ShowNodes();
-
+            Console.WriteLine("Oldu Canımm");
             Console.ReadLine();
+        }
+
+        private static void GetRelated()
+        {
+            Node node1 = WcfProxy<IHexService>.CreateChannel().Get(
+                new Node { Label = "Person", Id = "Bar" }
+                );
+            node1.Label = "Person";
+            Node node2 = new Node() { Label = "Person" };
+            node2.Label = "Person";
+           
+            List<Node> list=WcfProxy<IHexService>.CreateChannel().GetRelated(
+               node1, node2, new Relation() { Name = "KNOWS" });
+
+            list.ForEach(x=>{
+
+                Console.WriteLine(x.Name);
+            });
+            
+
+
+        }
+
+        private static void DeleteRelation()
+        {
+
+            Node node1 = WcfProxy<IHexService>.CreateChannel().Get(
+                new Node { Label = "Person", Id = "Can" }
+                );
+            node1.Label = "Person";       
+            Node node2 = WcfProxy<IHexService>.CreateChannel().Get(
+                new Node { Label = "Person", Id = "JUL" }
+                );
+            node2.Label = "Person";       
+            WcfProxy<IHexService>.CreateChannel().DeleteRelation(
+               node1, node2, new Relation() { Name = "HUGS" });
+
+            Console.WriteLine();
+
         }
 
         private static void AddRelation()
         {
             Node node1= WcfProxy<IHexService>.CreateChannel().Get(
-                new Node { Label = "Person", Id = "Bar" }
+                new Node { Label = "Person", Id = "Can" }
                 );
             node1.Label = "Person";
             Node node2 =WcfProxy<IHexService>.CreateChannel().Get(
-                new Node { Label = "Person", Id = "Onu" }
+                new Node { Label = "Person", Id = "JUL" }
                 );
             node2.Label = "Person";
             WcfProxy<IHexService>.CreateChannel().AddRelation(
-               node1, node2, new Relation() { Name = "KNOWS" });
+               node1, node2, new Relation() { Name = "HUGS" });
+
+            Console.WriteLine("Oldu da bitti maşalllah");
         }
 
         private static void UpdateNode()

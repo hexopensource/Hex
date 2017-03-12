@@ -3,10 +3,8 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Hex.Client.exe
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Hex.Client.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Hex.DataTypes.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Hex.Shared.dll
-C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Newtonsoft.Json.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Hex.DataTypes.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Hex.Shared.pdb
-C:\GitRepository\RepoDotNet\Hex\Hex.Client\bin\Debug\Newtonsoft.Json.xml
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\obj\Debug\Hex.Client.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\obj\Debug\Hex.Client.exe
 C:\GitRepository\RepoDotNet\Hex\Hex.Client\obj\Debug\Hex.Client.pdb

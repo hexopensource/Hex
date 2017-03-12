@@ -9,6 +9,7 @@ using Hex.DataTypes.Concrete;
 using Neo4jClient;
 using System.Linq.Expressions;
 using Hex.DataAccess.Helper;
+using System.ServiceModel;
 
 namespace Hex.DataAccess.Concrete
 {
@@ -70,9 +71,22 @@ namespace Hex.DataAccess.Concrete
         }
 
         
-        public List<Node> GetRelated(System.Linq.Expressions.Expression<Func<Node, bool>> query1, System.Linq.Expressions.Expression<Func<Node, bool>> query2, Relation relation)
+        public List<Node> GetRelated(Node node1,Node node2,Relation relation)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _client.Cypher
+               .Match("(n1:" + node1.Label + ") -[:" + relation.Name + "]->(n2:"+node2.Label+")")
+                 .Where((Node n1) => n1.Id == node1.Id)           
+                 .Return(n2 => n2.As<Node>())
+                 .Results.ToList();
+            }
+            catch (Exception ex)
+            {
+               
+                throw;
+            }
+           
         }
 
         public Tuple<Node, Node> GetRelations(System.Linq.Expressions.Expression<Func<Node, bool>> query1, System.Linq.Expressions.Expression<Func<Node, bool>> query2, Relation relation)
@@ -90,9 +104,23 @@ namespace Hex.DataAccess.Concrete
                 .WithParam("r", relation)
                 .ExecuteWithoutResults();
         }
-        public void DeleteRelation(System.Linq.Expressions.Expression<Func<Node, bool>> query1, System.Linq.Expressions.Expression<Func<Node, bool>> query2, Relation relation)
+        public void DeleteRelation(Node node1, Node node2, Relation relation)
         {
-            throw new NotImplementedException();
+            try
+            {
+                 _client.Cypher
+                .Match("(n1:" + node1.Label + ")-[r:" + relation.Name + "]->(n2:" + node2.Label + ")")
+                .Where((Node n1) => n1.Id == node1.Id)
+                .AndWhere((Node n2) => n2.Id == node2.Id)
+                .Delete("r")
+                .ExecuteWithoutResults();
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+           
         }
     }
 }

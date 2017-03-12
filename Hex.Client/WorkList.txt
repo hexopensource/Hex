@@ -1,0 +1,7 @@
+﻿
+- Exception Handling
+- Logging
+- Transaction Management
+- Autentication
+- Validation
+- Asenkronization

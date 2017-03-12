@@ -16,14 +16,9 @@ namespace Hex.DataTypes.Abstract
         {
             LastUpdated = DateTime.UtcNow;
         }
-        [JsonIgnore]
-        [XmlIgnore]
-        public string Label { get;  set; }
-       
-        [JsonIgnore]
-        [XmlIgnore]
+      
+        public string Label { get;  set; }    
         public DateTimeOffset LastUpdated { get; set; }
-
         public string Id { get; set; }
         public string Name { get; set; }
         public bool Status { get; set; }
