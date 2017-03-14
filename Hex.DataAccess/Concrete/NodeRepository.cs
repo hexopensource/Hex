@@ -9,7 +9,7 @@ using Hex.DataTypes.Concrete;
 using Neo4jClient;
 using System.Linq.Expressions;
 using Hex.DataAccess.Helper;
-using System.ServiceModel;
+using Newtonsoft;
 
 namespace Hex.DataAccess.Concrete
 {
