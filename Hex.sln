@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex.Service.WCF", "Hex.Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex.Client", "Hex.Client\Hex.Client.csproj", "{1A2B36AF-E46A-4627-AFD4-3A7ABBFA326A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex.Service.REST", "Hex.Service.REST\Hex.Service.REST.csproj", "{748E0FD7-CEFE-46EB-B3B3-1D52F699A325}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{1A2B36AF-E46A-4627-AFD4-3A7ABBFA326A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A2B36AF-E46A-4627-AFD4-3A7ABBFA326A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A2B36AF-E46A-4627-AFD4-3A7ABBFA326A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748E0FD7-CEFE-46EB-B3B3-1D52F699A325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748E0FD7-CEFE-46EB-B3B3-1D52F699A325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748E0FD7-CEFE-46EB-B3B3-1D52F699A325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748E0FD7-CEFE-46EB-B3B3-1D52F699A325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

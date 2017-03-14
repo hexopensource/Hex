@@ -13,7 +13,8 @@ namespace Hex.Client
     {
         static void Main(string[] args)
         {
-            GetRelated();
+            
+            //GetRelated();
             //DeleteRelation();
             //AddRelation();
             //UpdateNode();
