@@ -47,8 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\INode.cs" />
-    <Compile Include="Abstract\Node.cs" />
-    <Compile Include="Concrete\Person.cs" />
+    <Compile Include="Concrete\Node.cs" />
     <Compile Include="Concrete\Relation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

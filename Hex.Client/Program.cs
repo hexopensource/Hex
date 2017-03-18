@@ -3,7 +3,9 @@ using Hex.DataTypes.Concrete;
 using Hex.Shared;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +15,7 @@ namespace Hex.Client
     {
         static void Main(string[] args)
         {
-            
+            string url = "http://localhost:15298/api/hex/Get";
             //GetRelated();
             //DeleteRelation();
             //AddRelation();
@@ -26,7 +28,7 @@ namespace Hex.Client
             Console.WriteLine("Oldu Canımm");
             Console.ReadLine();
         }
-
+       
         private static void GetRelated()
         {
             Node node1 = WcfProxy<IHexService>.CreateChannel().Get(

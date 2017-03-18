@@ -1,4 +1,4 @@
-﻿using Hex.DataTypes.Abstract;
+﻿using Hex.DataTypes.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -7,7 +7,7 @@ namespace Hex.DataTypes.Concrete
         public Relation()
         {
         }
-        
+        [JsonProperty]
         public string Name { get; set; }
     }
 }

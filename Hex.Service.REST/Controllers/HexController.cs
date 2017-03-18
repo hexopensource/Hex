@@ -9,6 +9,9 @@ using System.Net.Http;
 using System.Web.Http;
 using Newtonsoft;
 using Newtonsoft.Json;
+using Hex.Service.REST.Models;
+using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace Hex.Service.REST.Controllers
 {
@@ -21,66 +24,68 @@ namespace Hex.Service.REST.Controllers
         }
             
 
-        [HttpGet]
-        public Node Get(string  json)
-        {
-            Node node =JsonConvert.DeserializeObject<Node>(json);
-            return _session.Get(node);
+        [HttpPost]
+        public Node Get([FromBody]object nodeJson)
+        {           
+           Node node =JsonConvert.DeserializeObject<Node>(nodeJson.ToString());
+           return _session.Get(node);
 
         }
-        [HttpGet]
-        public List<Node> GetList(string json)
+        [HttpPost]
+        public List<Node> GetList([FromBody]object nodeJson)
         {
-            Node node = JsonConvert.DeserializeObject<Node>(json);
+            
+            Node node = JsonConvert.DeserializeObject<Node>(nodeJson.ToString());
             return _session.GetList(node);
         }
 
         [HttpPost]
-        public void Add([FromBody] string json)
+        public void Add([FromBody] object nodeJson)
         {
-            Node node = JsonConvert.DeserializeObject<Node>(json);
+            Node node = JsonConvert.DeserializeObject<Node>(nodeJson.ToString());
             _session.Add(node);
         }
 
-        [HttpPatch]
-        public void Update([FromBody] string oldNodeString, [FromBody]string newNodeString)
+        [HttpPost]
+        public void Update([FromBody] object jsonBodyObject)
         {
-            Node oldNode = JsonConvert.DeserializeObject<Node>(oldNodeString);
-            Node newNode = JsonConvert.DeserializeObject<Node>(newNodeString);
-            _session.Update(oldNode, newNode);
+            UpdateModel model= JsonConvert.DeserializeObject<UpdateModel>(jsonBodyObject.ToString());
+            _session.Update(model.oldNode, model.newNode);
         }
 
-        [HttpDelete]
-        public void Delete([FromBody]string json)
+        [HttpPost]
+        public void Delete([FromBody]object nodeJson)
         {
-            Node node = JsonConvert.DeserializeObject<Node>(json);
+            Node node = JsonConvert.DeserializeObject<Node>(nodeJson.ToString());
             _session.Delete(node);
         }
         [HttpPost]
-        public void AddRelation([FromBody] string node1Json, [FromBody] string node2Json, [FromBody] string relationJson)
+        public void AddRelation([FromBody] object jsonBodyObject)
         {
-            Node node1 = JsonConvert.DeserializeObject<Node>(node1Json);
-            Node node2 = JsonConvert.DeserializeObject<Node>(node2Json);
-            Relation relation = JsonConvert.DeserializeObject<Relation>(relationJson);
-            _session.AddRelation(node1, node2, relation);
+
+            RelationModel model = JsonConvert.DeserializeObject<RelationModel>(jsonBodyObject.ToString());
+            _session.AddRelation(model.node1, model.node2, model.relation);
+            
         }
-        [HttpDelete]
-        public void DeleteRelation([FromBody]string node1Json, [FromBody]string node2Json, [FromBody] string relationJson)
+        [HttpPost]
+        public void DeleteRelation([FromBody]object jsonBodyObject)
         {
-            Node node1 = JsonConvert.DeserializeObject<Node>(node1Json);
-            Node node2 = JsonConvert.DeserializeObject<Node>(node2Json);
-            Relation relation = JsonConvert.DeserializeObject<Relation>(relationJson);
-            _session.DeleteRelation(node1, node2, relation);
+
+            RelationModel model = JsonConvert.DeserializeObject<RelationModel>(jsonBodyObject.ToString());
+            _session.DeleteRelation(model.node1, model.node2, model.relation);
         }
-        [HttpGet]
-        public List<Node> GetRelated(string node1Json, string node2Json, string relationJson)
-        {
-            Node node1 = JsonConvert.DeserializeObject<Node>(node1Json);
-            Node node2 = JsonConvert.DeserializeObject<Node>(node2Json);
-            Relation relation = JsonConvert.DeserializeObject<Relation>(relationJson);
-            return _session.GetRelated(node1, node2, relation);
+        [HttpPost]
+        public List<Node> GetRelated([FromBody] object jsonBodyObject)
+        {           
+            RelationModel model = JsonConvert.DeserializeObject<RelationModel>(jsonBodyObject.ToString());            
+            return _session.GetRelated(model.node1, model.node2, model.relation);
         }
 
+        [HttpGet]
+        public DataTable GetQuery(string query)
+        {
+            return null;
+        }
 
     }
 }

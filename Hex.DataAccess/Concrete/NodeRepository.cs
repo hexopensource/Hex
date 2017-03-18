@@ -1,14 +1,15 @@
 ﻿using Hex.DataAccess.Abstract;
-using Hex.DataTypes.Abstract;
+using Hex.DataTypes.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hex.DataTypes.Concrete;
+
 using Neo4jClient;
 using System.Linq.Expressions;
 using Hex.DataAccess.Helper;
+
 using Newtonsoft;
 
 namespace Hex.DataAccess.Concrete

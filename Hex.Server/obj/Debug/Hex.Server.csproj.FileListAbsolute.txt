@@ -1,3 +1,4 @@
+C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Hex.Server.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Hex.Server.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Hex.DataAccess.dll
@@ -11,6 +12,5 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Hex.Shared.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Neo4jClient.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Neo4jClient.xml
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Newtonsoft.Json.xml
-C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.pdb

@@ -2,6 +2,6 @@
 - Exception Handling
 - Logging
 - Transaction Management
-- Autentication
+- Autentication for REST and Client
 - Validation
 - Asenkronization
