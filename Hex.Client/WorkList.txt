@@ -5,3 +5,4 @@
 - Autentication for REST and Client
 - Validation
 - Asenkronization
+- MySQL integration for users

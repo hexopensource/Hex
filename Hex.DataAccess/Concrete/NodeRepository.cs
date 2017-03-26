@@ -6,11 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 using Neo4jClient;
 using System.Linq.Expressions;
 using Hex.DataAccess.Helper;
 
 using Newtonsoft;
+using Neo4jClient.Transactions;
+using System.Transactions;
 
 namespace Hex.DataAccess.Concrete
 {
@@ -19,13 +22,14 @@ namespace Hex.DataAccess.Concrete
         protected readonly GraphClient _client;
         public NodeRepository()
         {
-            _client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "fermat68");
+            _client = new GraphClient(new Uri("http://localhost:7474/db/data"), "neo4j", "fermat68");           
             _client.Connect();
         }
 
         public Node Get(Expression<Func<Node, bool>> query,Node node)
         {
-           IEnumerable<Node> listNode= _client.Cypher
+            
+                IEnumerable<Node> listNode= _client.Cypher
                 .Match("(n:" + node.Label + ")")
                 .Where(query)
                 .Return(n => n.As<Node>())
@@ -107,21 +111,30 @@ namespace Hex.DataAccess.Concrete
         }
         public void DeleteRelation(Node node1, Node node2, Relation relation)
         {
-            try
-            {
+            
                  _client.Cypher
                 .Match("(n1:" + node1.Label + ")-[r:" + relation.Name + "]->(n2:" + node2.Label + ")")
                 .Where((Node n1) => n1.Id == node1.Id)
                 .AndWhere((Node n2) => n2.Id == node2.Id)
                 .Delete("r")
                 .ExecuteWithoutResults();
-            }
-            catch (Exception ex)
-            {
-                
-                throw ex;
-            }
            
+           
+        }
+
+        public void BeginTransaction()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CommitTransaction()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RollbackTransaction()
+        {
+            throw new NotImplementedException();
         }
     }
 }

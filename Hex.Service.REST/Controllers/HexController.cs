@@ -41,9 +41,15 @@ namespace Hex.Service.REST.Controllers
 
         [HttpPost]
         public void Add([FromBody] object nodeJson)
-        {
+            {
             Node node = JsonConvert.DeserializeObject<Node>(nodeJson.ToString());
             _session.Add(node);
+        }
+
+        [HttpPost]
+        public void AddBatch([FromBody] List<Node> nodes)
+        {
+            _session.AddBatch(nodes);
         }
 
         [HttpPost]

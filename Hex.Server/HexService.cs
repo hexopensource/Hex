@@ -1,29 +1,26 @@
 ﻿using Hex.Shared;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Hex.DataTypes.Concrete;
 using Hex.DataAccess.Abstract;
 using Hex.DataAccess.Concrete;
-using Hex.DataTypes.Abstract;
-using System.Linq.Expressions;
+using System;
+using System.Transactions;
 
 namespace Hex.Server
 {
     public class HexService : IHexService
-    {        
+    {
         private readonly INodeRepository _session;
+        
         public HexService()
-        {            
+        {
             _session = new NodeRepository();
-        }      
+        }
 
         public Node Get(Node node)
-        {            
-            return _session.Get(n => (n.Id == node.Id), node);        
-            
+        {
+            return _session.Get(n => (n.Id == node.Id), node);
+
         }
         public List<Node> GetList(Node node)
         {
@@ -34,9 +31,9 @@ namespace Hex.Server
             _session.Add(node);
         }
 
-        public void Update(Node oldNode,Node newNode)
+        public void Update(Node oldNode, Node newNode)
         {
-            _session.Update(oldNode,newNode);
+            _session.Update(oldNode, newNode);
         }
 
         public void Delete(Node node)
@@ -45,7 +42,7 @@ namespace Hex.Server
         }
         public void AddRelation(Node node1, Node node2, Relation relation)
         {
-            _session.AddRelation(node1,node2,relation);
+            _session.AddRelation(node1, node2, relation);
         }
         public void DeleteRelation(Node node1, Node node2, Relation relation)
         {
@@ -54,6 +51,23 @@ namespace Hex.Server
         public List<Node> GetRelated(Node node1, Node node2, Relation relation)
         {
             return _session.GetRelated(node1, node2, relation);
+        }
+
+        public void AddBatch(List<Node> nodes)
+        {
+            try
+            {
+                using (var transactionScope = new TransactionScope())
+                {
+                    nodes.ForEach(x => { _session.Add(x); });
+                    transactionScope.Complete();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
         }
     }
 }

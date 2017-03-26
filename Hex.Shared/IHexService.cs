@@ -23,6 +23,10 @@ namespace Hex.Shared
         [OperationContract()]
         void Add(Node node);
 
+        void AddBatch(List<Node> nodes);
+
+
+
         [OperationContract()]
         void Update(Node oldNode,Node newNode);
 

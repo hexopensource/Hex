@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace Hex.DataAccess.Abstract
 {
@@ -19,8 +20,12 @@ namespace Hex.DataAccess.Abstract
         void AddRelation(Node node1,Node node2, Relation relation);
         void DeleteRelation(Node node1, Node node2, Relation relation);
         List<Node> GetRelated(Node node1,Node node2, Relation relation);
-        Tuple<Node, Node> GetRelations(Expression<Func<Node, bool>> query1, Expression<Func<Node, bool>> query2, Relation relation);    
+        Tuple<Node, Node> GetRelations(Expression<Func<Node, bool>> query1, Expression<Func<Node, bool>> query2, Relation relation);
 
+        void BeginTransaction();
+        void CommitTransaction();
+        void RollbackTransaction();
+        
 
     }
 }

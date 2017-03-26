@@ -40,6 +40,15 @@ namespace Hex.DataTypes.Concrete
         public string Birthday { get; set; }
         [JsonProperty]
         public string UserType { get; set; }
+
+        
         //Company
+
+        //Industry
+        [JsonProperty]
+        public string Description { get; set; }
+        [JsonProperty]
+        public string Group { get; set; }
     }
 }
+
