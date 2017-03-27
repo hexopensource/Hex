@@ -1,1 +1,0 @@
-C:\GitRepository\RepoDotNet\Hex\Hex.Console\obj\Debug\Hex.Console.csprojResolveAssemblyReference.cache
