@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using Hex.Service.REST.Models;
 using Newtonsoft.Json.Linq;
 using System.Data;
+using Hex.DataTypes.Concrete.MySQLEntity;
 
 namespace Hex.Service.REST.Controllers
 {
@@ -92,6 +93,13 @@ namespace Hex.Service.REST.Controllers
         {
             return null;
         }
+
+        [HttpGet]
+        public List<User> GetUserList()
+        {
+            return _session.GetUserList();
+        }
+
 
     }
 }

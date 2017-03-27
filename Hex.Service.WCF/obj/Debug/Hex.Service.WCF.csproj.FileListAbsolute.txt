@@ -1,4 +1,3 @@
-C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.Service.WCF.dll.config
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.Service.WCF.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.Service.WCF.pdb
@@ -14,6 +13,7 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Microsoft.ApplicationInsight
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.DataAccess.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.DataTypes.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Neo4jClient.dll
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\EntityFramework.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Newtonsoft.Json.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.Server.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.Shared.pdb
@@ -26,6 +26,8 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.DataAccess.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Hex.DataTypes.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Neo4jClient.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Neo4jClient.xml
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\EntityFramework.xml
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Newtonsoft.Json.xml
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.pdb

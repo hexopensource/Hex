@@ -7,6 +7,7 @@ using System.ServiceModel;
 using Hex.DataTypes.Concrete;
 using System.Linq.Expressions;
 using Hex.DataTypes.Abstract;
+using Hex.DataTypes.Concrete.MySQLEntity;
 
 namespace Hex.Shared
 {
@@ -41,6 +42,9 @@ namespace Hex.Shared
 
         [OperationContract()]
         List<Node> GetRelated(Node node1, Node node2, Relation relation);
+
+        [OperationContract]
+        List<User> GetUserList();
 
 
 

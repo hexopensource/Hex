@@ -5,16 +5,20 @@ using Hex.DataAccess.Abstract;
 using Hex.DataAccess.Concrete;
 using System;
 using System.Transactions;
+using Hex.DataAccess.Abstract.MySQL;
+using Hex.DataAccess.Concrete.MySQL;
+using Hex.DataTypes.Concrete.MySQLEntity;
 
 namespace Hex.Server
 {
     public class HexService : IHexService
     {
         private readonly INodeRepository _session;
-        
+        private readonly IUserRepository _userDal;
         public HexService()
         {
             _session = new NodeRepository();
+            _userDal = new UserDal();
         }
 
         public Node Get(Node node)
@@ -67,7 +71,10 @@ namespace Hex.Server
             {
 
             }
-
+        }
+        public List<User> GetUserList()
+        {
+           return _userDal.GetAll();
         }
     }
 }

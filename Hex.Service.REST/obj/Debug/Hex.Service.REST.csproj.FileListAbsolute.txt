@@ -1,4 +1,3 @@
-C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\obj\Debug\Hex.Service.REST.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\roslyn\csc.exe
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -31,6 +30,7 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\System.Web.Http.WebHost.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Hex.Shared.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Hex.DataAccess.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Neo4jClient.dll
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\EntityFramework.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Hex.DataTypes.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Hex.Server.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Microsoft.AI.DependencyCollector.xml
@@ -47,5 +47,9 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Hex.Shared.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Hex.DataAccess.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Neo4jClient.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\Neo4jClient.xml
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\EntityFramework.xml
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\obj\Debug\Hex.Service.REST.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\obj\Debug\Hex.Service.REST.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\obj\Debug\Hex.Service.REST.pdb
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\EntityFramework.SqlServer.dll
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\EntityFramework.SqlServer.xml
