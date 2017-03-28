@@ -14,8 +14,9 @@ using Hex.DataAccess.Helper;
 using Newtonsoft;
 using Neo4jClient.Transactions;
 using System.Transactions;
+using Hex.DataAccess.Abstract.Neo4j;
 
-namespace Hex.DataAccess.Concrete
+namespace Hex.DataAccess.Concrete.Neo4j
 {
     public class NodeRepository : INodeRepository       
     {

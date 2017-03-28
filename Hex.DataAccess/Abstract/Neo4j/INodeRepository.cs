@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace Hex.DataAccess.Abstract
+namespace Hex.DataAccess.Abstract.Neo4j
 {
     public interface INodeRepository
     {

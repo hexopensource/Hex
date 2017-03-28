@@ -16,3 +16,5 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\Newtonsoft.Json.xml
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Server\obj\Debug\Hex.Server.pdb
+C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\GitRepository\RepoDotNet\Hex\Hex.Server\bin\Debug\MySql.Data.dll

@@ -53,3 +53,5 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\obj\Debug\Hex.Service.REST.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\obj\Debug\Hex.Service.REST.pdb
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\EntityFramework.SqlServer.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\EntityFramework.SqlServer.xml
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\MySql.Data.Entity.EF6.dll
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.REST\bin\MySql.Data.dll

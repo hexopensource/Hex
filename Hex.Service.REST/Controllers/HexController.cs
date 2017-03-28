@@ -99,7 +99,21 @@ namespace Hex.Service.REST.Controllers
         {
             return _session.GetUserList();
         }
-
+        [HttpGet]
+        public User GetUser(string linkedinId)
+        {
+            return _session.GetUser(linkedinId);
+        }
+        [HttpGet]
+        public bool IsRegistered(string linkedinId)
+        {
+            return _session.IsRegistered(linkedinId);
+        }
+        [HttpPost]
+        public void Registration([FromBody]User user)
+        {
+            _session.Registration(user);
+        }
 
     }
 }

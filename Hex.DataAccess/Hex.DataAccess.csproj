@@ -71,18 +71,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\INodeRepository.cs" />
+    <Compile Include="Abstract\Neo4j\INodeRepository.cs" />
     <Compile Include="Concrete\MySQL\HexContext.cs" />
     <Compile Include="Abstract\MySQL\IEntityRepository.cs" />
     <Compile Include="Abstract\MySQL\IPaymentRepository.cs" />
     <Compile Include="Abstract\MySQL\IUserRepository.cs" />
     <Compile Include="Concrete\MySQL\EfEntityRepository.cs" />
-    <Compile Include="Concrete\MySQL\Mappings\PaymentMap.cs" />
-    <Compile Include="Concrete\MySQL\Mappings\UserMap.cs" />
     <Compile Include="Concrete\MySQL\PaymentDal.cs" />
     <Compile Include="Concrete\MySQL\UserDal.cs" />
-    <Compile Include="Concrete\NodeRepository.cs" />
-    <Compile Include="Helper\DataHelper.cs" />
+    <Compile Include="Concrete\Neo4j\NodeRepository.cs" />
+    <Compile Include="Concrete\Neo4j\Helper\DataHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,23 +9,20 @@ using System.Threading.Tasks;
 
 namespace Hex.DataAccess.Concrete.MySQL
 {
-    //[DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class HexContext:DbContext
     {
-        public HexContext() : base("Name=SexConnection")
+        public HexContext() : base("Name=HexConnection")
         {
-            //DbConfiguration.SetConfiguration(new MySql.Data.Entity.MySqlEFConfiguration());
+            DbConfiguration.SetConfiguration(new MySql.Data.Entity.MySqlEFConfiguration());
         }
         public DbSet<User> Users { get; set; }
-        public DbSet<Payment> Payments { get; set; }
-       
+        public DbSet<Payment> Payments { get; set; }     
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Configurations.Add(new UserMap());
-            //modelBuilder.Configurations.Add(new PaymentMap());
-            
+                       
         }
     }
 }

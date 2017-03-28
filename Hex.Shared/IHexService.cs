@@ -15,6 +15,7 @@ namespace Hex.Shared
     public interface IHexService
     {
         
+        //NEO4J
         [OperationContract()]        
         Node Get(Node node);
 
@@ -25,8 +26,6 @@ namespace Hex.Shared
         void Add(Node node);
 
         void AddBatch(List<Node> nodes);
-
-
 
         [OperationContract()]
         void Update(Node oldNode,Node newNode);
@@ -43,10 +42,16 @@ namespace Hex.Shared
         [OperationContract()]
         List<Node> GetRelated(Node node1, Node node2, Relation relation);
 
-        [OperationContract]
+        //MYSQL
+        [OperationContract()]
         List<User> GetUserList();
-
-
+        [OperationContract()]
+        User GetUser();
+        [OperationContract()]
+        bool IsRegistered();
+        [OperationContract()]
+        void Registration(User user);
+        
 
     }
 }

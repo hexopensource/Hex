@@ -48,10 +48,10 @@
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Abstract\INode.cs" />
-    <Compile Include="Concrete\MySQLEntity\Payment.cs" />
-    <Compile Include="Concrete\MySQLEntity\User.cs" />
-    <Compile Include="Concrete\Node.cs" />
-    <Compile Include="Concrete\Relation.cs" />
+    <Compile Include="Concrete\MySQL\Payment.cs" />
+    <Compile Include="Concrete\MySQL\User.cs" />
+    <Compile Include="Concrete\Neo4j\Node.cs" />
+    <Compile Include="Concrete\Neo4j\Relation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -31,3 +31,5 @@ C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\Newtonsoft.Json.xml
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.csprojResolveAssemblyReference.cache
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.dll
 C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\obj\Debug\Hex.Service.WCF.pdb
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\MySql.Data.Entity.EF6.dll
+C:\GitRepository\RepoDotNet\Hex\Hex.Service.WCF\bin\MySql.Data.dll

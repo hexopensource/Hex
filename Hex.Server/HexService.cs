@@ -8,6 +8,8 @@ using System.Transactions;
 using Hex.DataAccess.Abstract.MySQL;
 using Hex.DataAccess.Concrete.MySQL;
 using Hex.DataTypes.Concrete.MySQLEntity;
+using Hex.DataAccess.Concrete.Neo4j;
+using Hex.DataAccess.Abstract.Neo4j;
 
 namespace Hex.Server
 {
@@ -15,12 +17,13 @@ namespace Hex.Server
     {
         private readonly INodeRepository _session;
         private readonly IUserRepository _userDal;
+        private readonly IPaymentRepository _paymentDal;
         public HexService()
         {
             _session = new NodeRepository();
             _userDal = new UserDal();
         }
-
+        #region NEO4J
         public Node Get(Node node)
         {
             return _session.Get(n => (n.Id == node.Id), node);
@@ -72,9 +75,25 @@ namespace Hex.Server
 
             }
         }
+#endregion
+        #region MySQL
         public List<User> GetUserList()
         {
            return _userDal.GetAll();
         }
+        public User GetUser(string linkedinId)
+        {
+            return _userDal.Get(x => x.LinkedinId == linkedinId);
+        }
+
+        public bool IsRegistered(string linkedinId)
+        {
+            return _userDal.Get(x => x.LinkedinId == linkedinId) == null ? false : true;
+        }
+        public void Registration(User user)
+        {
+            _userDal.Add(user);
+        }
+        #endregion
     }
 }
