@@ -1,1 +1,1 @@
-# Hex [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]() [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()[![PyPI](https://img.shields.io/pypi/status/Django.svg)]()<img src="https://img.shields.io/badge/Donate%20Bitcoin-0.0015-ff69b4.svg">
+# Hex [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]() [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()[![PyPI](https://img.shields.io/pypi/status/Django.svg)]()<img src="https://img.shields.io/badge/Donate%20Bitcoin-3JZptE6C8ZHi1J9f1AGbuAorMBebhnMKT9-ff69b4.svg">
