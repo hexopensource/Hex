@@ -1,4 +1,7 @@
 # Hex [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]() [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()[![PyPI](https://img.shields.io/pypi/status/Django.svg)]()
+
+The project you have described is a back-end system that uses a node-and-relation-oriented data model and exposes a RESTful web service for accessing the data. It uses the Web API and WCF frameworks for implementing the web service and supports both MySQL and Neo4j as data storage options.The project you have described is a back-end system that uses a node-and-relation-oriented data model and exposes a RESTful web service for accessing the data. It uses the Web API and WCF frameworks for implementing the web service and supports both MySQL and Neo4j as data storage options.
+
 `Hex`  is a `web service` that provides a `REST API` for managing and querying a graph database. The service uses Neo4j as the underlying graph database technology, and allows clients to add, update, delete, and query nodes and relationships in the graph. The service also includes a MySQL database for managing user registration information. The service is implemented using the `WCF framework`, and the `REST API` is implemented using the `ASP.NET Web API framework`.
 
 
